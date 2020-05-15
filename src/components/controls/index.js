@@ -105,7 +105,7 @@ export default class Controls extends Component {
               type="button"
               title="Stop the simulation"
               onClick={this.props.onStop}
-              disabled={this.props.stopping}
+              disabled={this.props.stopping || !this.props.simulating}
             >
               <ion-icon class={icon} name="stop-outline"></ion-icon> Stop
             </button>
