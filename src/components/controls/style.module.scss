@@ -1,0 +1,178 @@
+.controls {
+  z-index: 50;
+  padding: 16px;
+  padding-right: 0;
+  background-color: #272727;
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  border-radius: 8px;
+  display: flex;
+  transition: transform 300ms ease-in-out;
+  overflow: hidden;
+  .hideShowContainer .icon {
+    transform: rotateZ(180deg);
+    transition: transform 300ms ease-in-out;
+  }
+  
+  &.closed {
+    transform: translateX(calc(-100% + 38px));
+    .hideShowContainer .icon {
+      transform: rotateZ(0);
+    }
+  }
+}
+
+.hideShowContainer .button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transition: background-color 100ms ease-in-out;
+  &:hover, &:focus {
+    background-color: rgba(255, 255, 255, 0.05)
+  }
+}
+
+.icon {
+  font-size: 18px;
+}
+
+
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: transparent;
+  border-radius: 6px;
+  color: white;
+  border-width: 0;
+  cursor: pointer;
+  outline: none;
+  &:disabled {
+    color: rgb(73, 73, 73);
+    background-color: rgba(32, 32, 32, 0.25);
+    &:hover {
+      color: rgb(73, 73, 73);
+      background-color: rgba(32, 32, 32, 0.25);
+    }
+  }
+  .icon {
+    margin-right: 8px;
+  }
+}
+
+.hideShowContainer {
+  display: flex;
+  justify-content: center;
+  margin-left: 8px;
+  background-color: #202020;
+  margin-top: -16px;
+  margin-bottom: -16px;
+  .icon {
+    margin-right: 0;
+  }
+}
+
+.inputsContainer {
+  display: flex;
+}
+.inputsContainer input {
+  flex: 1;
+  height: 100%;
+  background-color: transparent;
+  color: #ffffff;
+  border: 0;
+  outline: none;
+}
+.inputsContainer input:disabled {
+  color: rgb(73, 73, 73);
+  background: rgb(37, 37, 37);
+}
+
+.inputsContainer .inputGrp {
+  background-color: #202020;
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+}
+.inputsContainer .inputGrp.disabled {
+  color: rgb(73, 73, 73);
+  background: rgb(37, 37, 37);
+}
+.inputsContainer .inputGrp span {
+  display: inline-block;
+  padding: 8px;
+}
+.inputsContainer .inputGrp:first-child {
+  margin-right: 8px;
+}
+
+.gridSizeContainer {
+  border-left: 5px #e67e22 solid;
+  padding-left: 8px;
+  border-radius: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+}
+
+.gridSize {
+  color: #dfdfdf;
+  margin-bottom: 8px;
+  display: block;
+}
+
+
+.cellsButton {
+  color: rgb(46, 204, 113);
+  background-color: rgba(46, 204, 113, 0.05);
+  transition: background-color 100ms ease-in-out;
+  margin-left: 8px;
+  &:hover, &:focus {
+    background-color: rgba(46, 204, 113, 0.15);
+  }
+}
+
+
+.seedButton {
+  color: rgb(52, 152, 219);
+  background-color: rgba(52, 152, 219, 0.05);
+  transition: background-color 100ms ease-in-out;
+  &:hover, &:focus {
+    background-color: rgba(52, 152, 219, 0.15);
+  }
+}
+
+.simulateButton {
+  color: rgb(155, 89, 182);
+  background-color: rgba(155, 89, 182, 0.05);
+  margin-right: 8px;
+  transition: background-color 100ms ease-in-out;
+  &:hover, &:focus {
+    background-color: rgba(155, 89, 182, 0.15);
+  }
+}
+
+.stopButton {
+  color: rgb(231, 76, 60);
+  background-color: rgba(231, 76, 60, 0.05);
+  transition: background-color 100ms ease-in-out;
+  &:hover, &:focus {
+    background-color: rgba(231, 76, 60, 0.15);
+  }  
+}
+
+.resetButton {
+  color: rgb(230, 126, 34);
+  background-color: rgba(230, 126, 34, 0.05);
+  margin-top: 8px;
+  transition: background-color 100ms ease-in-out;
+  &:hover, &:focus {
+    background-color: rgba(230, 126, 34, 0.15);
+  }
+}
+
+.twoButtonsContainer {
+  display: flex;
+  margin-bottom: 8px;
+}
